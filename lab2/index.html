@@ -36,8 +36,7 @@ th {
 } 
 </style>
 <script>
-  var cs = "資工系";
-  //var d = [cs,cs,cs,cs,cs,cs];
+  var CS = "資工系";
   var c = ["物件導向軟體設計","計算機網路實驗","作業系統食物","生物統計","通訊系統","軟硬體專題(2)"];
   var t = ["黃崇源","李春良","張哲維","陳光武","陳仁暉","魏志達"];
   function addNewData() {
@@ -46,7 +45,7 @@ th {
     var cellCount = myTable.rows[0].cells.length;
     for (var i = 0; i < rowCount; i++) {
       var row = myTable.insertRow(-1);
-      row.insertCell(0).innerHTML = cs;
+      row.insertCell(0).innerHTML = CS;
       row.insertCell(1).innerHTML = c[i];
       row.insertCell(2).innerHTML = t[i];
       console.log(d[i], c[i],t[i]);
