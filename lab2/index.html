@@ -40,7 +40,7 @@ th {
   var d = [cs,cs,cs,cs,cs,cs];
   var c = ["物件導向軟體設計","計算機網路實驗","作業系統食物","生物統計","通訊系統","軟硬體專題(2)"];
   var t = ["黃崇源","李春良","張哲維","陳光武","陳仁暉","魏志達"];
-  function addNewData(){
+  function addNewData() {
     var myTable = document.getElementById("csie");
     var rowCount = c.length;
     var cellCount = myTable.rows[0].cells.length;
@@ -53,7 +53,9 @@ th {
     }
   }
   function delOldData(){
-    document.getElementById("csie").deleteRow(-1);
+    if(document.getElementById("csie").rows.length >= 2) {
+        document.getElementById("csie").deleteRow(-1);
+    }
   }
 </script>
 </html>
