@@ -12,24 +12,24 @@
             var container = document.getElementById('container');
             var arr = new Array(3);
             var count = 0;
-             window.onload = function() {
+            window.onload = function() {
                 container.textContent = "";
                 add_new_chars();
                 }
-             window.addEventListener("keyup", function(e)  {
-                 console.log(e.key);
-                 if(e.key) {
-                   if(e.key == container.textContent[0]) {
-                     container.textContent = container.textContent.replace(/./,"");
-                     count = 0;
-                   } else {
-                     count++;
-                   }
-                   add_new_chars();
-                   if(count == 3) {
-                    count = 0;
-                   }
-                 }
+            window.addEventListener("keyup", function(e)  {
+                console.log(e.key);
+                if(e.key) {
+                    if(e.key == container.textContent[0]) {
+                        container.textContent = container.textContent.replace(/./,"");
+                        count = 0;
+                    } else {
+                        count++;
+                    }
+                    add_new_chars();
+                    if(count == 3) {
+                        count = 0;
+                    }
+                }
             });
             function add_new_chars() {
               for(var i = 0; i < Math.random()*3+6*(count == 3); i++) {
